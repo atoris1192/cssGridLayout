@@ -2,21 +2,37 @@ body {
   padding: 0;
   margin: 0;
 }
-.container {
+.container.a {
   background: #eee;
   display: grid;
   grid-template: 70px 70px 70px / 90px 90px 90px;
   // grid-template: repeat(3, 70px) /repeat(3, 90px);
   // grid-template: repeat(3, 70px) / repeat(auto-fill, 90px)
+  // grid-template: 70px 70px 70px / 50% 90px 90px;
+  // grid-template: 70px 70px 70px / 100px 1fr 2fr;
+
+  
+  // grid-auto-flow: dense; // 間を埋める
+  grid-auto-flow: dense column; // 間を埋める
+  grid-auto-rows: 80px;
+  grid-auto-columns: 80px;
+
 }
+
 .item-1 {
   background: hsl(300, 80%, 30%);
+  // row start / column start / row end / column end
+  // grid-area: 3 / 2 / 4 / 4
 }
 .item-2 {
   background: hsl(300, 80%, 40%);
+  grid-row: span 2;
+  grid-column: span 1;
 }
 .item-3 {
   background: hsl(300, 80%, 50%);
+  grid-row: span 1;
+  grid-column: span 2;
 }
 .item-4 {
   background: hsl(200, 80%, 30%);
@@ -35,4 +51,32 @@ body {
 }
 .item-9 {
   background: hsl(100, 80%, 50%);
+}
+
+
+
+.container.b {
+  background: #eee;
+  display: grid;
+  grid-template:
+    "header header header"  80px
+    "main   .      sidebar" 80px
+    "footer footer footer"  80px
+    / 80px 80px 80px;
+}
+.item-10 {
+  grid-area: header;
+  background: hsl(300, 80%, 30%);
+}
+.item-11 {
+  grid-area: main;
+  background: hsl(300, 80%, 40%);
+}
+.item-12 {
+  grid-area: sidebar;
+  background: hsl(300, 80%, 50%);
+}
+.item-13 {
+  grid-area: footer;
+  background: hsl(200, 80%, 30%);
 }
