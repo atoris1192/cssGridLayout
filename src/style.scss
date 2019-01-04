@@ -63,10 +63,16 @@ body {
   background: #eee;
   display: grid;
   grid-template:
-    "header header header"  80px
-    "main   .      sidebar" 80px
-    "footer footer footer"  80px
-    / 80px 80px 80px;
+    // "header header header"  80px
+    // "main   .      sidebar" 80px
+    // "footer footer footer"  80px
+    // / 80px 80px 80px;
+
+    "header" 50px
+    "main" 50px
+    "sidebar" 50px
+    "footer" 50px
+    / 100%;
 }
 .item-10 {
   grid-area: header;
@@ -83,6 +89,15 @@ body {
 .item-13 {
   grid-area: footer;
   background: hsl(200, 80%, 30%);
+}
+@media (min-width: 570px) {
+  .container.b {
+    grid-template:
+      "header header " 50px
+      "main   sidebar" 50px
+      "footer footer"  50px
+      / 1fr 200px;
+  }
 }
 
 .container.c {
