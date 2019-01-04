@@ -26,13 +26,13 @@ body {
 }
 .item-2 {
   background: hsl(300, 80%, 40%);
-  grid-row: span 2;
-  grid-column: span 1;
+  // grid-row: span 2;
+  // grid-column: span 1;
 }
 .item-3 {
   background: hsl(300, 80%, 50%);
-  grid-row: span 1;
-  grid-column: span 2;
+  // grid-row: span 1;
+  // grid-column: span 2;
 }
 .item-4 {
   background: hsl(200, 80%, 30%);
@@ -45,12 +45,16 @@ body {
 }
 .item-7 {
   background: hsl(100, 80%, 30%);
+  justify-self: end;
+  align-self: end;
 }
 .item-8 {
   background: hsl(100, 80%, 40%);
 }
 .item-9 {
   background: hsl(100, 80%, 50%);
+  justify-self: start;
+  align-self: start;
 }
 
 
@@ -79,4 +83,32 @@ body {
 .item-13 {
   grid-area: footer;
   background: hsl(200, 80%, 30%);
+}
+
+.container.c {
+  width: 300px;
+  height: 300px;
+  background: #eee;
+  display: grid;
+  grid-template: 70px 70px 70px / 90px 90px 90px;
+  // grid-template: repeat(3, 70px) /repeat(3, 90px);
+  // grid-template: repeat(3, 70px) / repeat(auto-fill, 90px)
+  // grid-template: 70px 70px 70px / 50% 90px 90px;
+  // grid-template: 70px 70px 70px / 100px 1fr 2fr;
+
+  // justify-content: start;
+  // justify-content: end;
+  justify-content: center;
+
+  // align-content: start;
+  // align-content: end;
+  align-content: center;
+
+  // justify-items: start;
+  // justify-items: end;
+  justify-items: center;
+
+  // align-items: start;
+  // align-items: end;
+  align-items: center;
 }
