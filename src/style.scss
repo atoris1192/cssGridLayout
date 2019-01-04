@@ -5,6 +5,9 @@ body {
 .container {
   background: #eee;
   display: grid;
+  grid-template: 70px 70px 70px / 90px 90px 90px;
+  // grid-template: repeat(3, 70px) /repeat(3, 90px);
+  // grid-template: repeat(3, 70px) / repeat(auto-fill, 90px)
 }
 .item-1 {
   background: hsl(300, 80%, 30%);
